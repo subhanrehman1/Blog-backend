@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model blogs {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdBy   String
+  createdOn   DateTime @db.Date
+  description String
+  title       String
+}
+
+model users {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  email String
+  name  String
+  token String
+}

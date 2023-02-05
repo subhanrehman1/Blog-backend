@@ -1,0 +1,1 @@
+{"component":"user-service","level":"error","message":"\nInvalid `prisma.users.updateMany()` invocation:\n\n\nTransaction failed due to a write conflict or a deadlock. Please retry your transaction","timestamp":"2023-02-05 03:23:24"}
